@@ -14,10 +14,15 @@ import javax.swing.JOptionPane;
  * @author marcioc
  */
 public class TelaLogin extends javax.swing.JFrame {
-Connection conexao = null;
-PreparedStatement pst= null;
-ResultSet rs = null;
+    //usando a variavel conexao do DAL
+    Connection conexao = null;
+    //criando variáveis especiais para conexão com o BD
+    //Prepared Statemenr e ResultSet são frameworks do pacote java.sql
+    //e servem para preparar e executar as instruções SQL
+    PreparedStatement pst= null;
+    ResultSet rs = null;
 
+//criando o metodo logar    
 public void logar(){
     String sql="select * from tb_usuarios where login=? and senha=?";
     try {
@@ -72,6 +77,7 @@ public void logar(){
      */
     public TelaLogin() {
         initComponents();
+        //estabelecendo a conexao com o banco sempre neste ponto
         conexao = ModuloConexao.conector();
         //a linha abaixo server se apoi ao status da conexao
         //System.out.println(conexao);
