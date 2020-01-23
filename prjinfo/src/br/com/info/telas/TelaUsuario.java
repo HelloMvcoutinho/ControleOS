@@ -15,10 +15,10 @@ import javax.swing.JOptionPane;
 
 public class TelaUsuario extends javax.swing.JInternalFrame {
     //usando a variavel conexao do DAL
-    Connection conexao = null;
     //criando variáveis especiais para conexão com o BD
     //Prepared Statemenr e ResultSet são frameworks do pacote java.sql
     //e servem para preparar e executar as instruções SQL
+    Connection conexao = null;
     PreparedStatement pst= null;
     ResultSet rs = null;
     public TelaUsuario() {
@@ -34,6 +34,11 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
             rs = pst.executeQuery();
             if (rs.next()) {
                 txtUsuNom.setText(rs.getString(2));
+                txtUsuFon.setText(rs.getString(3));
+                txtUsuLog.setText(rs.getString(4));
+                txtUsuSen.setText(rs.getString(5));
+                //a linha abaixo se referencia ao combobox
+                cboPer.setSelectedItem(rs.getString(6));
             } else {
                 
             }

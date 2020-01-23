@@ -51,9 +51,9 @@ public void logar(){
                 TelaPrincipal principal = new TelaPrincipal();
                 principal.setVisible(true);
                 TelaPrincipal.MenRel.setEnabled(true);
-                TelaPrincipal.MenCadUsu.setEnabled(true);
-                TelaPrincipal.lblUsuario.setText(rs.getString(2));
-                TelaPrincipal.lblUsuario.setForeground(Color.red);
+                TelaPrincipal.MenCadUsu.setEnabled(true);//libera o acesso ao menu cadastrar usuário
+                TelaPrincipal.lblUsuario.setText(rs.getString(2));//escreve o nome do usuário na tela
+                TelaPrincipal.lblUsuario.setForeground(Color.red);//pinta o nome do usuário vermelho
                 this.dispose();//fecha a tela de login
                 conexao.close();//fecha a conexão com o BD
             }else{
