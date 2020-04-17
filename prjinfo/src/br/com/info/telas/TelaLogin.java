@@ -79,7 +79,7 @@ public void logar(){
         initComponents();
         //estabelecendo a conexao com o banco sempre neste ponto
         conexao = ModuloConexao.conector();
-        //a linha abaixo server se apoi ao status da conexao
+        //a linha abaixo server de apoio ao status da conexao
         //System.out.println(conexao);
         if (conexao!= null){
           lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/info/icones/dbok.png")));  
