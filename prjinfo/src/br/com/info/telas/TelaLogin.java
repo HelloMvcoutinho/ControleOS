@@ -22,7 +22,7 @@ public class TelaLogin extends javax.swing.JFrame {
     PreparedStatement pst= null;
     ResultSet rs = null;
 
-//criando o metodo logar    
+//criando o metodo logar teste Github   
 public void logar(){
     String sql="select * from tb_usuarios where login=? and senha=?";
     try {
